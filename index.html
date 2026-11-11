@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Vibes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="#" class="logo">♫ Music Vibes</a>
+        <span class="subtitulo">Tu música, tu espacio</span>
+    </header>
+
+    <main>
+        <section class="portada">
+            <p class="etiqueta">BIENVENIDO A MUSIC VIBES</p>
+            <h1>Encuentra tu próxima canción favorita</h1>
+            <p>Busca canciones, artistas, álbumes y playlists.</p>
+
+            <div class="buscador">
+                <input
+                    type="search"
+                    id="buscarMusica"
+                    placeholder="¿Qué música quieres escuchar?"
+                    autocomplete="off"
+                >
+                <button id="botonBuscar">Buscar</button>
+            </div>
+
+            <div class="tipos-busqueda">
+                <button id="buscarCanciones" class="tipo activo">
+                    Canciones
+                </button>
+                <button id="buscarAlbumes" class="tipo">
+                    Álbumes y playlists
+                </button>
+            </div>
+        </section>
+
+        <section class="seccion-resultados">
+            <div class="titulo-seccion">
+                <div>
+                    <p class="etiqueta">YOUTUBE MUSIC</p>
+                    <h2 id="tituloResultados">Canciones</h2>
+                </div>
+            </div>
+
+            <p id="mensaje" class="mensaje">
+                Escribe el nombre de una canción o artista para comenzar.
+            </p>
+
+            <div id="listaCanciones" class="grid-canciones"></div>
+            <div id="gridAlbumes" class="grid-albumes"></div>
+        </section>
+
+        <section class="seccion-reproductor" id="seccionReproductor">
+            <h2>Reproductor</h2>
+            <div id="reproductorYoutube">
+                <p>Selecciona una canción para reproducirla aquí.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Music Vibes | Tu música en un solo lugar ♫</p>
+    </footer>
+
+    <script src="JSP.js"></script>
+</body>
+</html>

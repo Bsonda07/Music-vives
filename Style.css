@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #101018;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #171722;
+    border-bottom: 1px solid #29293a;
+}
+
+.logo {
+    color: #a970ff;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.subtitulo {
+    color: #b8b8c8;
+    font-size: 14px;
+}
+
+main {
+    width: 84%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.portada {
+    text-align: center;
+    padding: 75px 15px 55px;
+}
+
+.etiqueta {
+    color: #b47aff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+}
+
+.portada h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.portada > p:not(.etiqueta) {
+    color: #b8b8c8;
+    margin-bottom: 28px;
+}
+
+.buscador {
+    display: flex;
+    max-width: 650px;
+    margin: auto;
+    gap: 10px;
+}
+
+.buscador input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #39394c;
+    border-radius: 10px;
+    outline: none;
+    background: #20202e;
+    color: white;
+    font-size: 15px;
+}
+
+.buscador input:focus {
+    border-color: #a970ff;
+}
+
+.buscador button {
+    padding: 0 25px;
+    border: none;
+    border-radius: 10px;
+    background: #934cff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    background: #7833df;
+}
+
+.tipos-busqueda {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.tipo {
+    padding: 11px 18px;
+    border: 1px solid #39394c;
+    border-radius: 20px;
+    background: #20202e;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.tipo.activo {
+    background: #934cff;
+    border-color: #934cff;
+    color: white;
+}
+
+.seccion-resultados {
+    padding: 25px 0 45px;
+}
+
+.titulo-seccion {
+    margin-bottom: 22px;
+}
+
+.titulo-seccion h2,
+.seccion-reproductor h2 {
+    font-size: 25px;
+}
+
+.mensaje {
+    color: #aaaabd;
+    margin: 15px 0 25px;
+    line-height: 1.5;
+}
+
+.grid-canciones,
+.grid-albumes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 22px;
+}
+
+.tarjeta {
+    background: #1c1c29;
+    border: 1px solid #2b2b3c;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    border-color: #934cff;
+}
+
+.tarjeta img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-tarjeta {
+    padding: 14px;
+}
+
+.contenido-tarjeta h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.contenido-tarjeta p {
+    color: #aaaabd;
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+.boton-tarjeta {
+    display: inline-block;
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+    background: #934cff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-tarjeta:hover {
+    background: #7833df;
+}
+
+.seccion-reproductor {
+    padding: 30px 0 60px;
+}
+
+.seccion-reproductor h2 {
+    margin-bottom: 18px;
+}
+
+#reproductorYoutube iframe {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+}
+
+#reproductorYoutube p {
+    color: #aaaabd;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #171722;
+    color: #aaaabd;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 18px 5%;
+    }
+
+    .subtitulo {
+        font-size: 11px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .portada {
+        padding-top: 55px;
+    }
+
+    .buscador {
+        flex-direction: column;
+    }
+
+    .buscador button {
+        padding: 14px;
+    }
+
+    .tipos-busqueda {
+        flex-wrap: wrap;
+    }
+
+    .grid-canciones,
+    .grid-albumes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .contenido-tarjeta {
+        padding: 10px;
+    }
+
+    .contenido-tarjeta h3 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .grid-canciones,
+    .grid-albumes {
+        grid-template-columns: 1fr;
+    }
+}
